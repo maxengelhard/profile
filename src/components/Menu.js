@@ -8,7 +8,7 @@ export function Menu() {
       return (
         <nav className="flex flex-col h-screen bg-gray-100 w-1/6 border-r border-gray-500">
           <div className="p-4 border-t border-b h-1/3 hover:bg-gray-200 hover:text-blue-600 cursor-pointer" onMouseEnter={handleHover}>
-            Github
+            About Me
           </div>
           <div className="p-4 border-t border-b h-1/3 hover:bg-gray-200 hover:text-blue-600 cursor-pointer" onMouseEnter={handleHover}>
             Easy Layers
