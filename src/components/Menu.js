@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 
-export function Menu() {
+export function Menu(props) {
   const [activeItem, setActiveItem] = useState(null);
 
   const handleHover = (e) => {
-    setActiveItem(e.target.innerText);
-    // TODO: Add your logic to display the image on hover
+    const item = e.target.innerText;
+    setActiveItem(item);
+    const image = item.toLowerCase().replace(' ','-')
+    props.onHover(`../media/${image}.png`);
   };
 
 //   const handleLeave = (e) => {
