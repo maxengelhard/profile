@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
 // images
+import aboutmesrc from '../media/about-me.png'
 import easyLayersrc from '../media/easy-layers.png'
 import reactRoulletesrc from '../media/react-roulette.png'
 
@@ -9,7 +10,8 @@ export function Menu(props) {
 
   const imageObj = {
     'easy-layers': easyLayersrc,
-    'react-roulette' : reactRoulletesrc
+    'react-roulette' : reactRoulletesrc,
+    'about-me': aboutmesrc 
   }
 
   const handleHover = (e) => {
