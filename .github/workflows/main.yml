@@ -1,0 +1,35 @@
+name: Upload functions
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+permissions:
+  id-token: write # This is required for requesting the JWT
+  contents: read  # This is required for actions/checkout
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@main
+    - name: Use Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18.x'
+    - name: Configure AWS Credentials
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        aws-region: us-east-1
+        role-to-assume: ${{ secrets.OPENID }}
+        role-session-name: MySessionName
+    
+    - name: Install dependencies
+      run: npm install
+    - name: Build folder
+      run: npm run build
+    - name: Copy files to frontend site
+      run:
+        aws s3 sync './build' ${{ secrets.FRONT_END_BUCKET }}
