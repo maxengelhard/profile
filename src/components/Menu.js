@@ -1,13 +1,22 @@
 import React, { useState } from 'react';
 
+// images
+import easyLayersrc from '../media/easy-layers.png'
+import reactRoulletesrc from '../media/react-roulette.png'
+
 export function Menu(props) {
   const [activeItem, setActiveItem] = useState(null);
+
+  const imageObj = {
+    'easy-layers': easyLayersrc,
+    'react-roulette' : reactRoulletesrc
+  }
 
   const handleHover = (e) => {
     const item = e.target.innerText;
     setActiveItem(item);
     const image = item.toLowerCase().replace(' ','-')
-    props.onHover(`../media/${image}.png`);
+    props.onHover(imageObj[image]);
   };
 
 //   const handleLeave = (e) => {
