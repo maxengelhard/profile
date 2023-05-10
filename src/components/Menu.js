@@ -5,20 +5,25 @@ import aboutmesrc from '../media/about-me.png'
 import easyLayersrc from '../media/easy-layers.png'
 import reactRoulletesrc from '../media/react-roulette.png'
 
+// components
+import AboutMe from './AboutMe'
+import EasyLayers from './EasyLayers'
+import ReactRoulette from './ReactRoulette'
+
 export function Menu(props) {
   const [activeItem, setActiveItem] = useState(null);
 
-  const imageObj = {
-    'easy-layers': easyLayersrc,
-    'react-roulette' : reactRoulletesrc,
-    'about-me': aboutmesrc 
+  const projectObj = {
+    'easy-layers': {'img': easyLayersrc, 'comp' : <EasyLayers />},
+    'react-roulette' : {'img': reactRoulletesrc, 'comp' : <ReactRoulette />},
+    'about-me': {'img': aboutmesrc, 'comp' : <AboutMe />} 
   }
 
   const handleHover = (e) => {
     const item = e.target.innerText;
     setActiveItem(item);
     const image = item.toLowerCase().replace(' ','-')
-    props.onHover(imageObj[image]);
+    props.onHover(projectObj[image]['img']);
   };
 
 //   const handleLeave = (e) => {
