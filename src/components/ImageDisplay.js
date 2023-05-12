@@ -1,14 +1,17 @@
 // components
-import {Description} from './Description'
-
+import { Description } from './Description';
 
 export function ImageDisplay(props) {
-
-    return (
-        <div>
-          <Description src={props.src.comp} />
-        <img src={props.src.img} alt="Active Item" className="w-full object-cover" />
-        </div>
-    );
-  }
-  
+  return (
+    <div className="h-screen flex flex-col">
+      <Description src={props.src.comp} />
+      <div className="flex-grow">
+        <img
+          src={props.src.img}
+          alt="Active Item"
+          className="object-cover max-h-full"
+        />
+      </div>
+    </div>
+  );
+}
