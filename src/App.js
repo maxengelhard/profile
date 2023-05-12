@@ -8,7 +8,7 @@ import { ImageDisplay } from "./components/ImageDisplay"
 import aboutmesrc from './media/about-me.png'
 
 export default function App() {
-  const [activeImage, setActiveImage] = useState(aboutmesrc);
+  const [activeImage, setActiveImage] = useState({'img': aboutmesrc, 'comp' : 'about-me'} );
   return (
     <Router>
     <Routes>
