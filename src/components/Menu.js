@@ -8,7 +8,7 @@ import reactRoulletesrc from '../media/react-roulette.png'
 
 
 export function Menu(props) {
-  const [activeItem, setActiveItem] = useState(null);
+  const [activeItem, setActiveItem] = useState("About Me");
 
   const projectObj = {
     'easy-layers': {'img': easyLayersrc, 'comp' : 'easy-layers'},
