@@ -25,9 +25,27 @@ export function Description(props) {
       return (
         <div>
           <h1 className="text-2xl font-bold">Easy Layers</h1>
-          <p>
-            Description for the Easy Layers feature goes here.
-          </p>
+            Easy Layers is a public website that allows people to create Lambda Layers with Python packages, just like pip install. With Easy Layers, you create layers that keep your Lambda functions smaller and easier to manage by externalizing dependencies that can be shared across multiple functions.
+            <br/>
+            <h3 className="text-1xl font-bold">Getting Started</h3>
+            To use Lambda Layers Creator, simply navigate to the website in your browser at https://easylayers.dev/
+            <br/>
+            Creating a Lambda Layer
+            To create a Lambda Layer, follow these steps:
+            <br/>
+            <ul>
+            <li>1. Enter the AWS Region, Python version, and architecture you want.</li>
+            <li>2. Enter the name of the Python package you want to include in your layer (e.g. requests, pandas, numpy, etc.).</li>
+            <li>3. Enter the version of the Python package (optional).</li>
+            <li>4. Click the "Submit" button to create a layer.</li>
+            </ul>
+          <br />
+          <a
+            href="https://easylayers.dev/"
+            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+          >
+            Checkout Easy Layers
+          </a>
         </div>
       );
     }
