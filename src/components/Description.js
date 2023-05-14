@@ -1,7 +1,7 @@
 export function Description(props) {
     if (props.src === 'about-me') {
       return (
-        <div className="flex p-4">
+        <div className="flex p-4 bg-black text-white">
         <div className="w-5/6 pr-2 border-r">
           <h1 className="text-2xl font-bold">About Me</h1>
           <p>
@@ -32,7 +32,7 @@ export function Description(props) {
       );
     } else if (props.src === 'easy-layers') {
       return (
-        <div className="flex p-4">
+        <div className="flex p-4 bg-black text-white">
         <div className="w-5/6 pr-2 border-r">
           <h1 className="text-2xl font-bold">Easy Layers</h1>
             Easy Layers is a public website that allows people to create Lambda Layers with Python packages, just like pip install. With Easy Layers, you create layers that keep your Lambda functions smaller and easier to manage by externalizing dependencies that can be shared across multiple functions.
@@ -51,7 +51,7 @@ export function Description(props) {
       );
     } else if (props.src === 'react-roulette') {
         return (
-          <div className="flex p-4">
+          <div className="flex p-4 bg-black text-white">
           <div className="w-5/6 pr-2 border-r">
             <h1 className="text-2xl font-bold">React Roulette</h1>
                 React Roulette is an app I made using react that allows people to play roulette. Information is stored in local storage. It was one of my first applications for learning react. I believe strongly in learning through doing and this gave me a foundation knowledge of react.
