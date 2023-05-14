@@ -11,9 +11,9 @@ export function Menu(props) {
   const [activeItem, setActiveItem] = useState("About Me");
 
   const projectObj = {
-    'easy-layers': {'img': easyLayersrc, 'comp' : 'easy-layers'},
-    'react-roulette' : {'img': reactRoulletesrc, 'comp' : 'react-roulette'},
-    'about-me': {'img': aboutmesrc, 'comp' : 'about-me'} 
+    'easy-layers': {'img': easyLayersrc, 'comp' : 'easy-layers', 'url': 'https://easylayers.dev/' },
+    'react-roulette' : {'img': reactRoulletesrc, 'comp' : 'react-roulette', 'url': 'https://roullete-app-487adb.netlify.app/'},
+    'about-me': {'img': aboutmesrc, 'comp' : 'about-me', 'url': 'https://github.com/maxengelhard'} 
   }
 
   const handleHover = (e) => {
