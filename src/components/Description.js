@@ -2,7 +2,7 @@ export function Description(props) {
     if (props.src === 'about-me') {
       return (
         <div className="flex p-4">
-        <div className="w-5/6 pr-4">
+        <div className="w-5/6 pr-2 border-r">
           <h1 className="text-2xl font-bold">About Me</h1>
           <p>
             I am a software engineer with a passion for building scalable and efficient applications. I have experience in a variety of technologies, including Javascript, Python, React, and AWS. I am also AWS cloud and data analytics certified.
@@ -14,7 +14,7 @@ export function Description(props) {
             I am always looking for new challenges and opportunities to learn and grow. I am confident that I can make a significant contribution to any team.
           </p>
           </div>
-          <div className="w-1/6 flex justify-center items-center">
+          <div className="w-1/6 flex justify-center items-center pl-1">
           <a
             href="https://github.com/maxengelhard"
             className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
@@ -27,7 +27,7 @@ export function Description(props) {
     } else if (props.src === 'easy-layers') {
       return (
         <div className="flex p-4">
-        <div className="w-5/6 pr-4">
+        <div className="w-5/6 pr-2 border-r">
           <h1 className="text-2xl font-bold">Easy Layers</h1>
             Easy Layers is a public website that allows people to create Lambda Layers with Python packages, just like pip install. With Easy Layers, you create layers that keep your Lambda functions smaller and easier to manage by externalizing dependencies that can be shared across multiple functions.
             <br/>
@@ -44,7 +44,7 @@ export function Description(props) {
             <li>4. Click the "Submit" button to create a layer.</li>
             </ul>
             </div>
-          <div className="w-1/6 flex justify-center items-center">
+          <div className="w-1/6 flex justify-center items-center pl-1">
           <a
             href="https://easylayers.dev/"
             className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
